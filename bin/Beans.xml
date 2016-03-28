@@ -11,5 +11,14 @@
    </bean>
 
     <bean class="com.evansitzes.InitBeanProcessing"/>
-    
+
+    <bean id="helloInternational" class="com.evansitzes.HelloInternational">
+        <property name="message1" value="Hello Entire World"/>
+        <property name="message2" value="What country are you from？"/>
+    </bean>
+
+    <bean id="helloJapan" class="com.evansitzes.HelloJapan" parent="helloInternational">
+        <property name="message1" value="ハローワールド"/>
+        <property name="message3" value="日本です！"/>
+    </bean>
 </beans>
